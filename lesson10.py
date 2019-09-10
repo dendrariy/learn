@@ -3,7 +3,7 @@ a.sort()
 b = a
 s = [0 for i in range(len(a))]
 i = 0
-x = [0 for i in range(len(s))]
+x = []
 for j in range (len(a)):
        if b[j] == b[j-1]:
                s[i] = b[j]
@@ -13,7 +13,9 @@ for j in range (len(a)):
                while b[j] == b[j-1]:
                        break
 for i in range (len(s)):
-      	if s[i] != 0:
-        	x[i] = s[i]
+       if s[i] != 0:
+               x.append(s[i])
+       if s[i] == 0:
+               x.insert(0, '0')
 for i in range (len(x)):
        print (x[i], end=" ")
